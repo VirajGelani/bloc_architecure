@@ -1,3 +1,4 @@
+import 'package:bloc/bloc.dart';
 import 'package:{{project_name}}/core/base/base_bloc.dart';
 import 'package:{{project_name}}/features/{{name.snakeCase()}}/bloc/{{name.snakeCase()}}_event.dart';
 import 'package:{{project_name}}/features/{{name.snakeCase()}}/bloc/{{name.snakeCase()}}_state.dart';
