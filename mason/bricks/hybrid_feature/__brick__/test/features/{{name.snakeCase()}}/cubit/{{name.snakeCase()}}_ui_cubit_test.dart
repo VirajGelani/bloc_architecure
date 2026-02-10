@@ -7,7 +7,7 @@ import 'package:{{project_name}}/features/{{name.snakeCase()}}/cubit/{{name.snak
 void main() {
   group('{{name.pascalCase()}}UiCubit', () {
     blocTest<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
-    'emits loading true when setLoading(true) is called',
+    'emits loading true',
     build: () => {{name.pascalCase()}}UiCubit(),
     act: (cubit) => cubit.setLoading(true),
     expect: () => [
@@ -16,11 +16,11 @@ void main() {
     );
 
     blocTest<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
-    'emits error message when setError is called',
+    'emits error message',
     build: () => {{name.pascalCase()}}UiCubit(),
     act: (cubit) => cubit.setError('error'),
     expect: () => [
-    const {{name.pascalCase()}}UiState(error: 'error'),
+    const {{name.pascalCase()}}UiState(errorMessage: 'error'),
     ],
     );
   });

@@ -1,4 +1,4 @@
-import '../../../core/base/base_ui_state.dart';
+import 'package:{{project_name}}/core/base/base_ui_state.dart';
 
 class {{name.pascalCase()}}UiState extends BaseUiState {
 const {{name.pascalCase()}}UiState({

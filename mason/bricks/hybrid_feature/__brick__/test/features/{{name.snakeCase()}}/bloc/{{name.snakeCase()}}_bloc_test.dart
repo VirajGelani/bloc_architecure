@@ -10,7 +10,7 @@ void main() {
     blocTest<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
     'emits Loading when Started event is added',
     build: () => {{name.pascalCase()}}Bloc(),
-    act: (bloc) => bloc.add({{name.pascalCase()}}Started()),
+    act: (bloc) => bloc.add(const {{name.pascalCase()}}Started()),
     expect: () => [
     {{name.pascalCase()}}Loading(),
     ],

@@ -1,4 +1,4 @@
-import '../../../core/base/base_cubit.dart';
+import 'package:{{project_name}}/core/base/base_cubit.dart';
 import 'package:{{project_name}}/features/{{name.snakeCase()}}/cubit/{{name.snakeCase()}}_ui_state.dart';
 
 class {{name.pascalCase()}}UiCubit

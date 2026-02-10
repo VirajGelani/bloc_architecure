@@ -1,24 +1,18 @@
-import 'package:equatable/equatable.dart';
+import 'package:{{project_name}}/core/base/base_ui_state.dart';
 
-class {{name.pascalCase()}}UiState extends Equatable {
-  final bool isLoading;
-  final String? error;
+class {{name.pascalCase()}}UiState extends BaseUiState {
+const {{name.pascalCase()}}UiState({
+super.isLoading,
+super.errorMessage,
+});
 
-  const {{name.pascalCase()}}UiState({
-    this.isLoading = false,
-    this.error,
-  });
-
-  {{name.pascalCase()}}UiState copyWith({
-    bool? isLoading,
-    String? error,
-  }) {
-    return {{name.pascalCase()}}UiState(
-    isLoading: isLoading ?? this.isLoading,
-    error: error,
-    );
-  }
-
-  @override
-  List<Object?> get props => [isLoading, error];
+{{name.pascalCase()}}UiState copyWith({
+bool? isLoading,
+String? errorMessage,
+}) {
+return {{name.pascalCase()}}UiState(
+isLoading: isLoading ?? this.isLoading,
+errorMessage: errorMessage ?? this.errorMessage,
+);
+}
 }

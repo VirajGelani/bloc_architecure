@@ -1,16 +1,18 @@
-import 'package:bloc/bloc.dart';
+import 'package:{{project_name}}/core/base/base_cubit.dart';
 import 'package:{{project_name}}/features/{{name.snakeCase()}}/cubit/{{name.snakeCase()}}_ui_state.dart';
 
 class {{name.pascalCase()}}UiCubit
-extends Cubit<{{name.pascalCase()}}UiState> {
-  {{name.pascalCase()}}UiCubit()
-      : super(const {{name.pascalCase()}}UiState());
+extends BaseCubit<{{name.pascalCase()}}UiState> {
+{{name.pascalCase()}}UiCubit()
+    : super(const {{name.pascalCase()}}UiState());
 
-  void setLoading(bool value) {
-    emit(state.copyWith(isLoading: value));
-  }
+@override
+{{name.pascalCase()}}UiState copyWithLoading(bool isLoading) {
+return state.copyWith(isLoading: isLoading);
+}
 
-  void setError(String? message) {
-    emit(state.copyWith(error: message));
-  }
+@override
+{{name.pascalCase()}}UiState copyWithError(String? errorMessage) {
+return state.copyWith(errorMessage: errorMessage);
+}
 }

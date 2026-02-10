@@ -7,4 +7,6 @@ const {{name.pascalCase()}}Event();
 List<Object?> get props => [];
 }
 
-class {{name.pascalCase()}}Started extends {{name.pascalCase()}}Event {}
+class {{name.pascalCase()}}Started extends {{name.pascalCase()}}Event {
+const {{name.pascalCase()}}Started();
+}
