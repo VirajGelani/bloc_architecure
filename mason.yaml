@@ -1,0 +1,7 @@
+bricks:
+  hybrid_feature:
+    path: mason/bricks/hybrid_feature
+  bloc_feature:
+    path: mason/bricks/bloc_feature
+  cubit_feature:
+    path: mason/bricks/cubit_feature

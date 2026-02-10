@@ -1,0 +1,27 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:bloc_test/bloc_test.dart';
+
+import 'package:{{project_name}}/features/{{name.snakeCase()}}/cubit/{{name.snakeCase()}}_ui_cubit.dart';
+import 'package:{{project_name}}/features/{{name.snakeCase()}}/cubit/{{name.snakeCase()}}_ui_state.dart';
+
+void main() {
+  group('{{name.pascalCase()}}UiCubit', () {
+    blocTest<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
+    'emits loading true when setLoading(true) is called',
+    build: () => {{name.pascalCase()}}UiCubit(),
+    act: (cubit) => cubit.setLoading(true),
+    expect: () => [
+    const {{name.pascalCase()}}UiState(isLoading: true),
+    ],
+    );
+
+    blocTest<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
+    'emits error message when setError is called',
+    build: () => {{name.pascalCase()}}UiCubit(),
+    act: (cubit) => cubit.setError('error'),
+    expect: () => [
+    const {{name.pascalCase()}}UiState(error: 'error'),
+    ],
+    );
+  });
+}
