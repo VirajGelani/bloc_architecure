@@ -72,15 +72,15 @@ mason make hybrid_feature --name login --project_name bloc_architecure -o test
 ```
 
 ```bash
-mason make bloc_feature --name login --project_name bloc_architecure -o lib
+mason make bloc_feature --name login1 --project_name bloc_architecure -o lib
 ```
 ```bash
-mason make bloc_feature --name login --project_name bloc_architecure -o test
+mason make bloc_feature --name login1 --project_name bloc_architecure -o test
 ```
 
 ```bash
-mason make cubit_feature --name login --project_name bloc_architecure -o lib
+mason make cubit_feature --name login2 --project_name bloc_architecure -o lib
 ```
 ```bash
-mason make cubit_feature --name login --project_name bloc_architecure -o test
+mason make cubit_feature --name login2 --project_name bloc_architecure -o test
 ```
