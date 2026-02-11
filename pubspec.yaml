@@ -37,6 +37,7 @@ dependencies:
   bloc: ^9.2.0
   flutter_bloc: ^9.1.1
   equatable: ^2.0.8
+  get_it: ^9.2.0
 
 dev_dependencies:
   bloc_test: ^10.0.0
