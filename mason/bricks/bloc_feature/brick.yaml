@@ -30,6 +30,9 @@ vars:
     type: string
     description: Feature name
     prompt: What is the feature name?
+  feature_path:
+    type: string
+    description: feature path folder
   project_name:
     type: string
     description: pubspec project name

@@ -51,36 +51,37 @@ mason add cubit_feature --path mason/bricks/cubit_feature
 create feature(screen) with test:
 
 ```bash
-mason make hybrid_feature --name login --project_name bloc_architecure -o .
+mason make hybrid_feature --name login --feature_path auth/login --project_name bloc_architecure -o .
 ```
 
 ```bash
-mason make bloc_feature --name login1 --project_name bloc_architecure -o .
+mason make bloc_feature --name login1 --feature_path auth/login1 --project_name bloc_architecure -o .
 ```
 
 ```bash
-mason make cubit_feature --name login2 --project_name bloc_architecure -o .
+mason make cubit_feature --name login2 --feature_path auth/login2 --project_name bloc_architecure -o .
 ```
+
 
 create feature only or test only:
 
 ```bash
-mason make hybrid_feature --name login --project_name bloc_architecure -o lib
+mason make hybrid_feature --name login --feature_path auth/login --project_name bloc_architecure -o lib
 ```
 ```bash
-mason make hybrid_feature --name login --project_name bloc_architecure -o test
-```
-
-```bash
-mason make bloc_feature --name login1 --project_name bloc_architecure -o lib
-```
-```bash
-mason make bloc_feature --name login1 --project_name bloc_architecure -o test
+mason make hybrid_feature --name login --feature_path auth/login --project_name bloc_architecure -o test
 ```
 
 ```bash
-mason make cubit_feature --name login2 --project_name bloc_architecure -o lib
+mason make bloc_feature --name login1 --feature_path auth/login1 --project_name bloc_architecure -o lib
 ```
 ```bash
-mason make cubit_feature --name login2 --project_name bloc_architecure -o test
+mason make bloc_feature --name login1 ---feature_path auth/login1 -project_name bloc_architecure -o test
+```
+
+```bash
+mason make cubit_feature --name login2 --feature_path auth/login2 --project_name bloc_architecure -o lib
+```
+```bash
+mason make cubit_feature --name login2 --feature_path auth/login2 --project_name bloc_architecure -o test
 ```

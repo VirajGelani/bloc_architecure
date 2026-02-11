@@ -1,7 +1,12 @@
+import 'package:bloc_architecure/di/feature_di.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
+
+final getIt = GetIt.instance;
 
 void main() {
+  registerFeatures(getIt);
   runApp(const MyApp());
 }
 
