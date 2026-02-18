@@ -2,10 +2,12 @@ import 'package:bloc_architecure/di/feature_di.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+import 'package:get_storage/get_storage.dart';
 
 final getIt = GetIt.instance;
 
-void main() {
+Future<void> main() async {
+  await GetStorage.init();
   registerFeatures(getIt);
   runApp(const MyApp());
 }

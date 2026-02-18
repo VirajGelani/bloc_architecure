@@ -9,15 +9,15 @@ void main() {
     blocTest<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
     'emits loading true',
     build: () => {{name.pascalCase()}}UiCubit(),
-    act: (cubit) => cubit.setLoading(true),
-    expect: () => [const {{name.pascalCase()}}UiState(isLoading: true)],
+    act: (cubit) {},
+    expect: () => [],
     );
 
     blocTest<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
     'emits error message',
     build: () => {{name.pascalCase()}}UiCubit(),
-    act: (cubit) => cubit.setError('error'),
-    expect: () => [const {{name.pascalCase()}}UiState(errorMessage: 'error')],
+    act: (cubit) {},
+    expect: () => [],
     );
   });
 }

@@ -10,6 +10,12 @@ folder structure rules:
 2. Bloc = business flow only
 3. View = bridge + rendering
 
+# Freezed class generation
+
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
 # Use mason to create boilerplate code:
 
 ```bash

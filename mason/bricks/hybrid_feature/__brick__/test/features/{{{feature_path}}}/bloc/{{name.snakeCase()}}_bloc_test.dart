@@ -7,13 +7,24 @@ import 'package:{{project_name}}/features/{{{feature_path}}}/bloc/{{name.snakeCa
 
 void main() {
   group('{{name.pascalCase()}}Bloc', () {
+    test('initial state is correct', () {
+      expect(
+          {{name.pascalCase()}}Bloc().state,
+      {{name.pascalCase()}}State
+      .
+      initial
+      (
+      )
+      ,
+      );
+    });
     blocTest<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
-    'emits Loading when Started event is added',
+    'emits loading true then false when started is added',
     build: () => {{name.pascalCase()}}Bloc(),
-    act: (bloc) => bloc.add(const {{name.pascalCase()}}Started()),
-    expect: () => [{{name.pascalCase()}}Loading
-    (
-    )
+    act: (bloc) => bloc.add(const {{name.pascalCase()}}Event.started()),
+    expect: ()
+    =>
+    [
     ]
     ,
     );

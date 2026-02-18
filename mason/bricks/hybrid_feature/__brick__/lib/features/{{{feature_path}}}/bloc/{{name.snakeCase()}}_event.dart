@@ -1,12 +1,8 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-sealed class {{name.pascalCase()}}Event extends Equatable {
-const {{name.pascalCase()}}Event();
+part '{{name.snakeCase()}}_event.freezed.dart';
 
-@override
-List<Object?> get props => [];
-}
-
-class {{name.pascalCase()}}Started extends {{name.pascalCase()}}Event {
-const {{name.pascalCase()}}Started();
+@freezed
+class {{name.pascalCase()}}Event with _${{name.pascalCase()}}Event {
+const factory {{name.pascalCase()}}Event.started() = _Started;
 }

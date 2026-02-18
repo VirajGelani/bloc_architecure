@@ -8,7 +8,6 @@ void register
 Feature(GetIt getIt) {
   getIt.registerFactory < {{name.pascalCase()}}UiCubit >
       (() => {{name.pascalCase()}}UiCubit());
-
   getIt.registerFactory<{{name.pascalCase()}}Bloc>(() => {{name.pascalCase()}}Bloc
   (
   )

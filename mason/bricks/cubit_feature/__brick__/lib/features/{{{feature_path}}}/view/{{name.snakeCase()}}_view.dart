@@ -11,11 +11,9 @@ const {{name.pascalCase()}}View({super.key});
 Widget build(BuildContext context) {
 return BlocBuilder<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
 builder: (context, ui) {
-return Scaffold(
+return const Scaffold(
 body: Center(
-child: ui.isLoading
-? const CircularProgressIndicator()
-    : const Text('{{name.pascalCase()}} View'),
+child: Text('{{name.pascalCase()}} View'),
 ),
 );
 },
