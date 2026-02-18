@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:{{project_name}}/widgets/app_scaffold.dart';
 import 'package:{{project_name}}/features/{{{feature_path}}}/bloc/{{name.snakeCase()}}_bloc.dart';
 import 'package:{{project_name}}/features/{{{feature_path}}}/bloc/{{name.snakeCase()}}_state.dart';
 
@@ -13,7 +14,7 @@ class {{name.pascalCase()}}View extends StatelessWidget {
       create: (_) => {{name.pascalCase()}}Bloc(),
       child: BlocListener<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
         listener: (_, __) {},
-        child: const Scaffold(
+        child: AppScaffold(
           body: Center(
             child: Text('{{name.pascalCase()}} View'),
           ),

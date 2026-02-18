@@ -1,10 +1,27 @@
+import 'package:bloc_architecure/core/constants/app_constant.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class URLs {
-  static String baseURL = "";
-  static String imageBaseURL = "";
-  static String couchURL = "";
-  static String couchUsername = "";
-  static String couchPassword = "";
-  static bool isProduction = true;
+  static String get baseURL =>
+      dotenv.env[AppConstants.baseUrlKey] ?? '';
+
+  static String get imageBaseURL =>
+      dotenv.env[AppConstants.imageUrlKey] ?? '';
+
+  static String get couchURL =>
+      dotenv.env[AppConstants.couchUrlKey] ?? '';
+
+  static String get couchUsername =>
+      dotenv.env[AppConstants.couchUsernameKey] ?? '';
+
+  static String get couchPassword =>
+      dotenv.env[AppConstants.couchPasswordKey] ?? '';
+
+  static bool get isProduction {
+    final value = dotenv.env['IS_PRODUCTION'];
+    if (value == null) return true;
+    return value.toLowerCase() == 'true';
+  }
 }
 
 abstract class EndPoints {

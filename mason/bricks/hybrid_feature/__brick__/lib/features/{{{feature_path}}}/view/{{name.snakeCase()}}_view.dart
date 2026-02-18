@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
+import 'package:{{project_name}}/widgets/app_scaffold.dart';
 import 'package:{{project_name}}/features/{{{feature_path}}}/cubit/{{name.snakeCase()}}_ui_cubit.dart';
 import 'package:{{project_name}}/features/{{{feature_path}}}/cubit/{{name.snakeCase()}}_ui_state.dart';
 import 'package:{{project_name}}/features/{{{feature_path}}}/bloc/{{name.snakeCase()}}_bloc.dart';
@@ -23,7 +24,7 @@ class {{name.pascalCase()}}View extends StatelessWidget {
       ],
       child: BlocBuilder<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
         builder: (context, state) {
-          return const Scaffold(
+          return AppScaffold(
             body: Center(
               child: Text('{{name.pascalCase()}} View'),
             ),
