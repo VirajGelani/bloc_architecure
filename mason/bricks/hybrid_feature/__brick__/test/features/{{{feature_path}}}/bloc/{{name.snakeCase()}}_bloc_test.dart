@@ -9,24 +9,15 @@ void main() {
   group('{{name.pascalCase()}}Bloc', () {
     test('initial state is correct', () {
       expect(
-          {{name.pascalCase()}}Bloc().state,
-      {{name.pascalCase()}}State
-      .
-      initial
-      (
-      )
-      ,
+        {{name.pascalCase()}}Bloc().state,
+        {{name.pascalCase()}}State.initial(),
       );
     });
     blocTest<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
-    'emits loading true then false when started is added',
-    build: () => {{name.pascalCase()}}Bloc(),
-    act: (bloc) => bloc.add(const {{name.pascalCase()}}Event.started()),
-    expect: ()
-    =>
-    [
-    ]
-    ,
+      'emits expected states when started is added',
+      build: () => {{name.pascalCase()}}Bloc(),
+      act: (bloc) => bloc.add(const {{name.pascalCase()}}Event.started()),
+      expect: () => [],
     );
   });
 }

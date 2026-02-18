@@ -5,18 +5,18 @@ import 'package:{{project_name}}/features/{{{feature_path}}}/cubit/{{name.snakeC
 import 'package:{{project_name}}/features/{{{feature_path}}}/cubit/{{name.snakeCase()}}_ui_state.dart';
 
 class {{name.pascalCase()}}View extends StatelessWidget {
-const {{name.pascalCase()}}View({super.key});
+  const {{name.pascalCase()}}View({super.key});
 
-@override
-Widget build(BuildContext context) {
-return BlocBuilder<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
-builder: (context, ui) {
-return const Scaffold(
-body: Center(
-child: Text('{{name.pascalCase()}} View'),
-),
-);
-},
-);
-}
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
+      builder: (context, ui) {
+        return const Scaffold(
+          body: Center(
+            child: Text('{{name.pascalCase()}} View'),
+          ),
+        );
+      },
+    );
+  }
 }
