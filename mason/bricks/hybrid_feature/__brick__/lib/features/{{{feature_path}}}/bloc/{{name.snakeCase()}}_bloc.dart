@@ -7,8 +7,8 @@ class {{name.pascalCase()}}Bloc
     extends BaseBloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> {
   {{name.pascalCase()}}Bloc() : super({{name.pascalCase()}}State.initial()) {
     on<{{name.pascalCase()}}Event>(
-      ({{name.pascalCase()}}Event event, Emitter<{{name.pascalCase()}}State> emit) {
-        event.map(started: (event) => _onStarted(emit));
+      ({{name.pascalCase()}}Event event, Emitter<{{name.pascalCase()}}State> emit) async {
+        await event.when(started: () => _onStarted(emit));
       },
     );
   }

@@ -14,13 +14,10 @@ void main() {
       );
     });
     blocTest<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
-      'emits loading true then false when started is added',
+      'emits expected states when started is added',
       build: () => {{name.pascalCase()}}Bloc(),
       act: (bloc) => bloc.add(const {{name.pascalCase()}}Event.started()),
-      expect: () => [
-        const {{name.pascalCase()}}State(isLoading: true),
-        const {{name.pascalCase()}}State(isLoading: false),
-      ],
+      expect: () => [],
     );
   });
 }

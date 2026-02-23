@@ -22,7 +22,7 @@ class {{name.pascalCase()}}View extends StatelessWidget {
         ),
         BlocProvider(create: (_) => GetIt.I<{{name.pascalCase()}}UiCubit>()),
       ],
-      child: BlocBuilder<{{name.pascalCase()}}Bloc, {{name.pascalCase()}}State>(
+      child: BlocBuilder<{{name.pascalCase()}}UiCubit, {{name.pascalCase()}}UiState>(
         builder: (context, state) {
           return AppScaffold(
             body: Center(

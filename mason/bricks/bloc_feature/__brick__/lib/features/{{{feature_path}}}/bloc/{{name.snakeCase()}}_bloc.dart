@@ -6,20 +6,12 @@ import 'package:{{project_name}}/features/{{{feature_path}}}/bloc/{{name.snakeCa
 class {{name.pascalCase()}}Bloc
     extends BaseBloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> {
   {{name.pascalCase()}}Bloc() : super({{name.pascalCase()}}State.initial()) {
-    on<{{name.pascalCase()}}Event>((event, emit) async {
-      await event.when(
-        started: () => _onStarted(emit),
-      );
-    });
+    on<{{name.pascalCase()}}Event>(
+      ({{name.pascalCase()}}Event event, Emitter<{{name.pascalCase()}}State> emit) async {
+        await event.when(started: () => _onStarted(emit));
+      },
+    );
   }
 
-  Future<void> _onStarted(
-    Emitter<{{name.pascalCase()}}State> emit,
-  ) async {
-    emit(state.copyWith(isLoading: true));
-
-    await Future.delayed(const Duration(seconds: 1));
-
-    emit(state.copyWith(isLoading: false));
-  }
+  Future<void> _onStarted(Emitter<{{name.pascalCase()}}State> emit) async {}
 }
